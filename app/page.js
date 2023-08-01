@@ -1,113 +1,281 @@
-import Image from 'next/image'
+'use client';
+
+import Image from 'next/image';
+import { Luxurious_Script, Luxurious_Roman } from 'next/font/google';
+import { useEffect, useState } from 'react';
+import { RiSearch2Fill } from 'react-icons/ri';
+import { BiBed } from 'react-icons/bi';
+import Rooms from './(sampleData)/data.json';
+import { Swiper, SwiperSlide, useSwiper, SwiperRef } from 'swiper/react';
+import Link from 'next/link';
+import { FreeMode, Navigation, Controller } from 'swiper/modules';
+import 'swiper/css';
+import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md';
+import { BiSolidStarHalf, BiSolidStar } from 'react-icons/bi';
+import TestimonialData from './(sampleData)/testimonials.json';
+
+const luxurious = Luxurious_Script({
+	weight: '400',
+	subsets: ['latin-ext'],
+	display: 'swap',
+});
+
+const luxuriousR = Luxurious_Roman({
+	weight: '400',
+	subsets: ['latin-ext'],
+	display: 'swap',
+});
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	const [checkIn, setCheckIn] = useState();
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+	useEffect(() => {
+		const script = document.createElement('script');
+		script.src = 'https://widget.freetobook.com/widget.js';
+		script.async = true;
+		document.body.appendChild(script);
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+		return () => {
+			document.body.removeChild(script);
+		};
+	}, []);
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+	const swiperr = useSwiper();
+	const [SwiperRef, setSwiperRef] = useState(null);
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+	const prevHandler = () => {
+		SwiperRef.slidePrev();
+	};
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	const nextHandler = () => {
+		SwiperRef.slideNext();
+	};
+
+	const categories = [
+		'Concerts',
+		'Theater & Art',
+		'Conferences',
+		'Charity',
+		'Sports',
+		'Festivals',
+		'Party',
+		'Movies',
+	];
+
+	return (
+		<main>
+			{/* Hero*/}
+			<section
+				style={{
+					backgroundImage: 'url(/heroImage.jpg)',
+					backgroundPosition: '50% 75%',
+					backgroundSize: '1920px',
+					backgroundRepeat: 'no-repeat',
+				}}
+				className='h-[50vh] lg:h-[75vh] flex justify-center items-center relative'
+			>
+				<div className='bg-black/60 h-full w-full flex justify-center items-center flex-col gap-2'>
+					<h1
+						className={`${luxurious.className} text-[6rem] md:text-[12rem] text-white leading-[2.5rem] md:leading-[5.5rem]`}
+					>
+						Hanna&apos;s
+					</h1>
+					<h2
+						className={`${luxuriousR.className} text-[1.5rem] md:text-[3.0rem] text-white`}
+					>
+						Guest House
+					</h2>
+				</div>
+				{/* Quick Search Bar*/}
+				<div className=' bg-white absolute md:left-[12%] lg:left-[25%] md:p-2  p-6 lg:-bottom-8 md:-bottom-12 -bottom-32 rounded-2xl md:rounded-none border-[0.1px] border-black/20 drop-shadow-md flex-row flex justify-between text-sm md:text-lg '>
+					<div
+						className='ftb-widget md:w-[600px] lg:w-[800px]'
+						data-id='20201'
+						data-token='R2QXxtCo5naWwHl1KSGAgE16oHBB3Xfsjlk758elAvKw2pW9GR3ClcgObUEzf'
+					></div>
+				</div>
+			</section>
+			{/* Welcome*/}
+			<section className='py-20 md:py-36 flex items-center text-base md:text-2xl font-semibold flex-col mt-20 md:mt-0'>
+				<h1 className='md:text-4xl'>Welcome to Hannah&apos;s Guest House</h1>
+				<div className='flex flex-col lg:flex-row mt-10 md:mt-16 w-full'>
+					<div className='lg:w-[50%] flex flex-col justify-center items-center px-10 md:px-20 text-justify text-base'>
+						<p>
+							Welcome to Hannah&apos;s Guest House! We are delighted to invite
+							you to experience a warm and welcoming stay at our charming guest
+							house in the heart of Aberdeen. Nestled in the vibrant
+							neighborhood of Bon Accord, our establishment offers a delightful
+							blend of comfort, convenience, and Scottish hospitality
+						</p>
+						<br />
+						<p>
+							Whether you are a leisure traveler seeking a cozy retreat or a
+							business traveler in need of a comfortable base, Hannah&apos;s
+							Guest House is the perfect choice. Our dedicated team is committed
+							to ensuring your stay is nothing short of exceptional, providing
+							you with a home away from home. From our tastefully appointed
+							rooms to our personalized services, we strive to create an
+							unforgettable experience for each and every guest. Situated in
+							close proximity to Aberdeen&apos;s renowned attractions, shopping
+							destinations, and cultural sites, our guest house serves as an
+							ideal starting point for exploring the beauty and rich heritage of
+							this captivating city.
+						</p>
+					</div>
+					<div
+						className='lg:w-[50%] h-[350px] lg:h-auto flex justify-center items-center mt-10 lg:mt-0 bg-cover'
+						style={{
+							backgroundImage: 'url(/welcomeImage.jpg)',
+							backgroundPosition: '50% 50%',
+							backgroundRepeat: 'no-repeat',
+						}}
+					></div>
+				</div>
+			</section>
+			{/* Guest Rooms */}
+			<section className=' bg-rose-50 py-10 flex justify-center flex-col items-center'>
+				<h1
+					className={`${luxurious.className} mb-8 text-center text-6xl font-bold text`}
+				>
+					Guest Rooms
+				</h1>
+				<div className=' relative pb-32 gap-y-4  px-4 lg:px-5 flex flex-col md:flex-row justify-start items-center  md:gap-2 lg:gap-5 flex-wrap md:gap-y-8'>
+					{Rooms.map((x, index) => (
+						<div
+							key={index}
+							className='w-[350px] border-black/10 border-2 flex flex-col rounded-lg overflow-hidden'
+						>
+							<div
+								className='bg-cover h-[200px]'
+								style={{
+									backgroundImage: `url(${x.image})`,
+									backgroundPosition: '50% 75%',
+									backgroundRepeat: 'no-repeat',
+								}}
+							/>
+							<div className='min-h-[80px] px-4 py-5 bg-white'>
+								<h1 className='font-semibold text-ellipsis line-clamp-1'>
+									{x.name}
+								</h1>
+								<p className='text-xs flex flex-row gap-1'>
+									<BiBed />
+									{x.bed}
+								</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</section>
+			{/* Values */}
+			<section>
+				<div
+					style={{
+						backgroundImage: 'url(/bedroom.jpg)',
+						backgroundPosition: '50% 75%',
+						backgroundSize: '1920px',
+						backgroundRepeat: 'no-repeat',
+						height: '400px',
+					}}
+					className='relative w-[100vw]  my-28 '
+				>
+					<div className=' bg-[#B84770] flex p-10 md:absolute h-auto w-[100%] md:w-[550px] -top-20 right-20 items-center text-lg flex-col text-white '>
+						<h1 className='text-white text-xl font-semibold '>Values</h1>
+						<h1 className='self-start mt-4 font-medium'>Warm Hospitality</h1>
+						<p className=' text-white/60'>
+							At our guest house, we take pride in providing warm and genuine
+							hospitality to all our guests. From the moment you step through
+							our doors, you&apos;ll be greeted with a friendly smile and a
+							heartfelt welcome.
+						</p>
+						<h1 className='self-start mt-4 font-medium'>Tranquil Retreat</h1>
+						<p className=' text-white/60'>
+							Escape from the hustle and bustle of everyday life and immerse
+							yourself in a serene and tranquil retreat at our guest house.
+						</p>
+						<h1 className='self-start mt-4 font-medium'>
+							Exquisite Accomodations
+						</h1>
+						<p className=' text-white/60'>
+							Indulge in the luxury of our exquisite accommodations, designed
+							with your comfort in mind. Each room is thoughtfully decorated and
+							furnished to create a cozy and elegant ambiance.
+						</p>
+					</div>
+				</div>
+			</section>
+			{/* Testimonies*/}
+			<section className='relative mt-96 py-10 md:mt-0 md:py-16 bg-rose-50'>
+				<h1
+					className={` absolute -top-[60px] left-5 text-[8rem] font-mono italic text-pink-900 font-extrabold`}
+				>
+					&apos;&apos;
+				</h1>
+				<Swiper
+					// freeMode
+					// grabCursor
+
+					modules={[Controller, FreeMode]}
+					className='catSwiper  w-[90%]'
+					breakpoints={{
+						0: {
+							slidesPerView: 1.1,
+							spaceBetween: 10,
+							// centeredSlides: true,
+						},
+						480: {
+							slidesPerView: 2.5,
+							spaceBetween: 10,
+						},
+						768: {
+							slidesPerView: 2.1,
+							spaceBetween: 15,
+						},
+						1024: {
+							slidesPerView: 3,
+							spaceBetween: 15,
+						},
+						1280: {
+							slidesPerView: 3,
+							spaceBetween: 30,
+						},
+					}}
+					direction='horizontal'
+					onSwiper={(swiper) => setSwiperRef(swiper)}
+				>
+					{TestimonialData?.map((x, index) => (
+						<SwiperSlide key={index}>
+							<div className='bg-white h-80 lg:h-96 rounded-[10px] min-w-[19rem] md:w-[18rem] lg:w-[26rem] flex flex-col my-6 text-black p-8 shadow-3xl drop-shadow-md border-[0.5px] '>
+								<div className='gap-x-4 h-[80%] overflow-hidden'>
+									<h1 className='font-bold mb-2'>{x.title}</h1>
+									<p className='text-black/50 text-sm md:text-base overflow-hidden lg:text-justify'>
+										{x.review}
+									</p>
+								</div>
+								<div className='mt-4 flex flex-col lg:flex-row gap-y-4 justify-between'>
+									<div>
+										<h1 className='font-bold'>{x.name}</h1>
+										<p className='text-black/50'>{x.country}</p>
+									</div>
+									<div className='flex flex-row gap-2 text-amber-400'>
+										{[...Array(Math.floor(x.rating))].map((_, i) => (
+											<BiSolidStar key={i} />
+										))}
+										{x.rating - Math.floor(x.rating) >= 0.5 && (
+											<BiSolidStarHalf />
+										)}
+									</div>
+								</div>
+							</div>
+						</SwiperSlide>
+					))}
+				</Swiper>
+				<div className='flex justify-center items-center p-12'>
+					<div className='rounded-full flex justify-between border-[1px] bg-white shadow-md drop-shadow-sm border-gray-200 py-2 px-5 w-32 text-2xl'>
+						<MdNavigateBefore onClick={prevHandler} />
+						<MdNavigateNext onClick={nextHandler} />
+					</div>
+				</div>
+			</section>
+		</main>
+	);
 }

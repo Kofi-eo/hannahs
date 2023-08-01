@@ -1,0 +1,42 @@
+[
+	{
+		"name": "Double Room with Shared Bathroom",
+		"image": "/bedroom.jpg",
+		"bed": "1 Double Bed"
+	},
+	{
+		"name": "Superior King Room",
+		"image": "/bedroom.jpg",
+		"bed": "1 extra large Double Bed or 1 Single Bed"
+	},
+	{
+		"name": "Standard Double Room with Shared Bathroom",
+		"image": "/bedroom.jpg",
+		"bed": "1 Double Bed"
+	},
+	{
+		"name": "Single Room",
+		"image": "/bedroom.jpg",
+		"bed": "1 Single Bed"
+	},
+	{
+		"name": "Deluxe King Room",
+		"image": "/bedroom.jpg",
+		"bed": "1 Large Double Bed"
+	},
+	{
+		"name": "Double Room with Private Bathroom",
+		"image": "/bedroom.jpg",
+		"bed": "1 Double Bed"
+	},
+	{
+		"name": "King Room",
+		"image": "/bedroom.jpg",
+		"bed": "1 Extra-Large Double Bed"
+	},
+	{
+		"name": "Double Room with Shared Bathroom",
+		"image": "/bedroom.jpg",
+		"bed": "1 Double Bed"
+	}
+]

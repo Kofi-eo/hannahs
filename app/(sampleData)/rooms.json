@@ -1,0 +1,304 @@
+[
+	{
+		"title": "Single Room",
+		"rate": "$250/night",
+		"guests": "1 Guest",
+		"size": "12",
+		"details": "The single room features parquet floors, a seating area with a flat-screen TV, a wardrobe, an electric kettle, as well as heating. The unit offers 1 bed.",
+		"beds": [
+			{
+				"bed": "1 Single bed"
+			}
+		],
+		"commodities": {
+			"wifi": true,
+			"tv": true,
+			"airConditioning": false,
+			"heating": true,
+			"privateshower": false,
+			"privatetoilet": true,
+			"hairdryer": true,
+			"toiletries": true,
+
+			"linen": true,
+			"hardwoodFloor": true,
+			"upperFloorsAccessibleByStairs": true,
+			"electricKettle": true,
+			"towels": true,
+			"wardrobe": true,
+			"seatingArea": true,
+			"clothesRack": true,
+			"foldUpBed": true
+		},
+		"photos": [
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			},
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			},
+			{
+				"alt": "single room main",
+				"src": "/bedroom.jpg"
+			}
+		]
+	},
+	{
+		"title": "Superior King Room",
+		"rate": "$250/night",
+		"guests": "2 Guests",
+		"size": "30",
+		"details": "The spacious double room provides a seating area and a wardrobe, as well as a private bathroom featuring a shower.",
+		"beds": [
+			{
+				"bed": "1 extra-large double bed"
+			},
+			{
+				"bed": "1 single bed"
+			}
+		],
+		"commodities": {
+			"wifi": true,
+			"tv": true,
+			"airConditioning": false,
+			"heating": true,
+			"privateshower": true,
+			"privatetoilet": true,
+			"hairdryer": true,
+			"toiletries": true,
+
+			"linen": true,
+			"hardwoodFloor": true,
+			"upperFloorsAccessibleByStairs": true,
+			"electricKettle": true,
+			"towels": true,
+			"wardrobe": true,
+			"seatingArea": true,
+			"clothesRack": true,
+			"foldUpBed": true,
+			"entirelocateddown": true
+		},
+		"photos": [
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			},
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			}
+		]
+	},
+	{
+		"title": "Deluxe King Room",
+		"rate": "$250/night",
+		"guests": "2 Guests",
+		"size": "25",
+		"details": "The double room offers a seating area and a wardrobe, as well as a private bathroom boasting a shower. The unit has 1 bed.",
+		"beds": [
+			{
+				"bed": "1 large double bed"
+			}
+		],
+		"commodities": {
+			"wifi": true,
+			"tv": true,
+			"airConditioning": false,
+			"heating": true,
+			"privateshower": true,
+			"privatetoilet": true,
+			"hairdryer": true,
+			"toiletries": true,
+
+			"linen": true,
+			"hardwoodFloor": true,
+			"upperFloorsAccessibleByStairs": true,
+			"electricKettle": true,
+			"towels": true,
+			"wardrobe": true,
+			"seatingArea": true,
+			"clothesRack": true,
+			"foldUpBed": true
+		},
+		"photos": [
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			},
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			}
+		]
+	},
+	{
+		"title": "King Room",
+		"rate": "$250/night",
+		"guests": "2 Guests",
+		"size": "25",
+		"details": "The double room provides a seating area and a wardrobe, as well as a private bathroom featuring a shower. The unit offers 1 bed.",
+		"beds": [
+			{
+				"bed": "1 extra-large double bed"
+			}
+		],
+		"commodities": {
+			"wifi": true,
+			"tv": true,
+			"airConditioning": false,
+			"heating": true,
+			"privateshower": true,
+			"privatetoilet": true,
+			"hairdryer": true,
+			"toiletries": true,
+
+			"linen": true,
+			"hardwoodFloor": true,
+			"upperFloorsAccessibleByStairs": true,
+			"electricKettle": true,
+			"towels": true,
+			"wardrobe": true,
+			"seatingArea": true,
+			"clothesRack": true,
+			"foldUpBed": true
+		},
+		"photos": [
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			},
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			}
+		]
+	},
+	{
+		"title": "Standard Double Room with Shared Bathroom",
+		"rate": "$250/night",
+		"guests": "2 Guests",
+		"size": "18",
+		"details": "The double room has parquet floors, a seating area with a flat-screen TV, a wardrobe, an electric kettle, as well as heating. The unit has 1 bed.",
+		"beds": [
+			{
+				"bed": "1 double bed"
+			}
+		],
+		"commodities": {
+			"wifi": true,
+			"tv": true,
+			"airConditioning": false,
+			"heating": true,
+			"privateshower": false,
+			"privatetoilet": true,
+			"hairdryer": true,
+			"toiletries": true,
+
+			"linen": true,
+			"hardwoodFloor": true,
+			"upperFloorsAccessibleByStairs": true,
+			"electricKettle": true,
+			"towels": true,
+			"wardrobe": true,
+			"seatingArea": true,
+			"clothesRack": true,
+			"foldUpBed": true
+		},
+		"photos": [
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			},
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			}
+		]
+	},
+	{
+		"title": "Double Room with Private Bathroom",
+		"rate": "$250/night",
+		"guests": "2 Guests",
+		"size": "20",
+		"details": "The double room provides a seating area and a wardrobe, as well as a private bathroom featuring a shower. The unit offers 1 bed.",
+		"beds": [
+			{
+				"bed": "1 double bed"
+			}
+		],
+		"commodities": {
+			"wifi": true,
+			"tv": true,
+			"airConditioning": false,
+			"heating": true,
+			"privateshower": true,
+			"privatetoilet": true,
+			"hairdryer": true,
+			"toiletries": true,
+
+			"linen": true,
+			"hardwoodFloor": true,
+			"upperFloorsAccessibleByStairs": true,
+			"electricKettle": true,
+			"towels": true,
+			"wardrobe": true,
+			"seatingArea": true,
+			"clothesRack": true,
+			"foldUpBed": true
+		},
+		"photos": [
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			},
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			}
+		]
+	},
+	{
+		"title": "Double Room with Shared Bathroom",
+		"rate": "$250/night",
+		"guests": "2 Guests",
+		"size": "20",
+		"details": "This double room features a electric kettle and seating area. This room share bathroom with 1 other room.",
+		"beds": [
+			{
+				"bed": "1 double bed"
+			}
+		],
+		"commodities": {
+			"wifi": true,
+			"tv": true,
+			"airConditioning": false,
+			"heating": true,
+			"privateshower": false,
+			"privatetoilet": true,
+			"hairdryer": true,
+			"toiletries": true,
+
+			"linen": true,
+			"hardwoodFloor": true,
+			"upperFloorsAccessibleByStairs": true,
+			"electricKettle": true,
+			"towels": true,
+			"wardrobe": true,
+			"seatingArea": true,
+			"clothesRack": true,
+			"foldUpBed": true
+		},
+		"photos": [
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			},
+			{
+				"alt": "single room main",
+				"src": "/heroImage.jpg"
+			}
+		]
+	}
+]

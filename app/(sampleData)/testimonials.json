@@ -1,0 +1,37 @@
+[
+	{
+		"name": "Francia",
+		"country": "United Kingdom",
+		"title": "Exceptional",
+		"review": "I thoroughly enjoyed my stay at Hannah's Guesthouse. The hosts were pleasant and accommodating. They went above and beyond to make my stay comfortable.",
+		"rating": 5
+	},
+	{
+		"name": "Martin",
+		"country": "South Africa",
+		"title": "Very Good",
+		"review": " Rhona was extremely curtious and friendly.",
+		"rating": 4.5
+	},
+	{
+		"name": "Laurie",
+		"country": "United Kingdom",
+		"title": "Excellent value for money in immaculate room",
+		"review": "Amazing value for money. Room was spacious and immaculate and very tastefully decorated with huge comfy bed. Host was very friendly and quick easy check in/check out. Doubt you’d find a nicer room for the price. Was handy having a fridge and microwave as well as a nice seating area and the local information in the room was useful too.",
+		"rating": 4.5
+	},
+	{
+		"name": "Rhoda",
+		"country": "United Kingdom",
+		"title": "Exceptional Guesthouse",
+		"review": "The warm welcome and the homely atmosphere was very much appreciated. This is truly a very well thought out guesthouse and very well run. I loved the breakfast area and the well cooked and presented breakfast. Rhona and Joe are very kind and thoughtful people. It was a pleasure to meet you and keep up the great work you do. Big huge thanks 😊 xx",
+		"rating": 5
+	},
+	{
+		"name": "Lucia",
+		"country": "Germany",
+		"title": "Exceptional",
+		"review": "Had a wonderful stay at the guesthouse. The rooms are beautifully decorated and clean. Rhona and Joe were most accommodating and breakfast was great! Definitely recommend staying here!",
+		"rating": 5
+	}
+]
